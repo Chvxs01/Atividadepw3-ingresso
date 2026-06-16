@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.Duration;
+import java.util.List;
 
 @Getter
 @Setter
@@ -19,6 +20,9 @@ public class Filme {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_FILME")
     private Long id;
+
+    @OneToMany (mappedBy = "filme")
+    private List<Sessao> sessoes;
 
     @Column(name = "TX_NOME")
     private String nome;
