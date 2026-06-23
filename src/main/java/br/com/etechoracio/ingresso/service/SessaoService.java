@@ -30,8 +30,4 @@ public class SessaoService {
         return sessaoMapper.toResponseDTOList(sessoes);
     }
 
-    public List<SessaoResponseDTO> findEmCartaz() {
-        var sessoes = SessaoRepository.findByHorario(LocalTime horario);
-        return sessaoMapper.toResponseDTOList(sessoes);
-    }
 }

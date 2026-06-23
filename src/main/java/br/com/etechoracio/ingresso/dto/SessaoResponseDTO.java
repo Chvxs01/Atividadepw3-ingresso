@@ -9,7 +9,6 @@ public record SessaoResponseDTO(
         Long id,
         LocalDate data,
         LocalTime horario,
-        Filme filme,
         Double preco,
         String sala
 

@@ -22,11 +22,6 @@ public class SessaoController {
 
     @GetMapping
     public List<SessaoResponseDTO> findAll(){
-        return SessaoService.findAll();
-    }
-
-    @GetMapping("/em-cartaz")
-    public List<SessaoResponseDTO> findByFilme(){
-        return SessaoService.findByFilme();
+        return sessaoService.findAll();
     }
 }
